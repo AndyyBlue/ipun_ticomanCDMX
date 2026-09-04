@@ -32,7 +32,7 @@ function showSection(targetId) {
     button.classList.toggle('active', button.dataset.target === targetId);
   });
 
-  if (!isMobileMode() && writerDiv) {
+  if (writerDiv) {
     if (targetId === 'inicio') {
       writerDiv.style.display = 'block';
       writerText.innerHTML = ''; 
@@ -53,6 +53,17 @@ function scrollToSection(targetId) {
   buttons.forEach((button) => {
     button.classList.toggle('active', button.dataset.target === targetId);
   });
+
+   if (writerDiv) {
+    if (targetId === 'inicio') {
+      writerDiv.style.display = 'block';
+      writerText.innerHTML = '';
+      i = 0;
+      writer();
+    } else {
+      writerDiv.style.display = 'none';
+    }
+  }
 }
 
 buttons.forEach((button) => {
@@ -68,9 +79,16 @@ buttons.forEach((button) => {
 
 const initialId = window.location.hash.replace('#', '') || 'inicio';
 if (isMobileMode()) {
-  sections.forEach((section) => section.classList.add('active'));
+  //sections.forEach((section) => section.classList.add('active'));
   const validId = document.querySelector(`[data-target="${initialId}"]`) ? initialId : 'inicio';
   scrollToSection(validId);
+
+  if (writerDiv && validId === 'inicio') {
+    writerDiv.style.display = 'block';
+    writerText.innerHTML = '';
+    i = 0;
+    writer(); 
+  }
 } else {
   showSection(document.querySelector(`[data-target="${initialId}"]`) ? initialId : 'inicio');
 }
