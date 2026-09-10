@@ -346,10 +346,10 @@ body li {
   .scroll-top img {max-width: 38px;width: 38px;}
   h1 {font-size: 1.5rem;} 
   h2 {font-size: 1.2rem;} 
-  .over-text{font-size:1.6rem;}
+  .over-text{font-size:1.5rem;}
   .content-shell{padding:0px 0px;margin:0px;}
   .arrow{width: 60px;height: 60px;font-size: 32px;}
-  .writer h1{font-size:2.5rem;}
+  .writer h1{font-size:1.6rem;}
   .nav-btn, .nav-btn:hover, .nav-btn.active{background:transparent;color:black;}
   .vision, .mision{font-size:3rem;}
   .info-btn{font-size:1rem;}
