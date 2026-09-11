@@ -121,16 +121,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem 1rem;
-  padding: 0.8rem 0;
+  justify-content: center;
+  gap:1rem;
 }
 .brand {
   display: flex;
+  flex-direction:row;
+  align-items:center;
   gap: 0.75rem;
-  min-width: 0;
-  flex: 1 1 auto;
-  transform: translateX(60px);
 }
 
 .logo {
@@ -138,9 +136,11 @@ body {
   width: 110px;
   height: auto;
   max-width: 100%;
-  transform: translateX(-15px);
+  transform: none;
 }
+
 .site-title {
+  display:block;  
   font-weight: 700;
   font-size: 2rem;
   font-family:'Playfair Display', serif;
@@ -337,19 +337,19 @@ body li {
 }
 @media (max-width: 600px) {
   .brand{transform: translateX(8px);}
-  .site-title {font-size: 1.2rem; transform: translateX(-18px);}
+  .site-title {font-size: 1.2rem;}
   .parr-text{font-size:1.1rem;}
-  .logo {width: 165px;height:100px;}
+  .logo {width: auto;height:100px;}
   .hero-title{-webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.836);font-size:1.5rem;padding:1px 20px;}
   .page-wrapper {padding: 0 0.75rem 1rem;}
   body a img {max-width: 92px;}
   .scroll-top img {max-width: 38px;width: 38px;}
   h1 {font-size: 1.5rem;} 
   h2 {font-size: 1.2rem;} 
-  .over-text{font-size:1.5rem;}
+  .over-text{font-size:1.2rem;}
   .content-shell{padding:0px 0px;margin:0px;}
   .arrow{width: 60px;height: 60px;font-size: 32px;}
-  .writer h1{font-size:1.6rem;}
+  .writer h1{font-size:1.2rem;}
   .nav-btn, .nav-btn:hover, .nav-btn.active{background:transparent;color:black;}
   .vision, .mision{font-size:3rem;}
   .info-btn{font-size:1rem;}
